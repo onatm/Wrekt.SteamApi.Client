@@ -1,0 +1,11 @@
+version: 1.0.{build}
+build_script:
+- cmd: build.bat
+artifacts:
+- path: distribution\*.nupkg
+  name: NuGet Package
+deploy:
+- provider: NuGet
+  api_key:
+    secure: 1hRYxfCpE6sxjc1ycCYDBHper3qZNfuVDDvQ+F3p/MCydem4xk+x6BdvL+/khUG5
+  artifact: /.*\.nupkg/
