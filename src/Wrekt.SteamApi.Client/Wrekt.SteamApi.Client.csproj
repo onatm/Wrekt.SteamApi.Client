@@ -39,8 +39,9 @@
     <Reference Include="Common.Logging.Core">
       <HintPath>..\..\packages\Common.Logging.Core.3.1.0\lib\net40\Common.Logging.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Hepsi.Http.Client">
-      <HintPath>..\..\packages\Hepsi.Http.Client.1.0.0\lib\net45\Hepsi.Http.Client.dll</HintPath>
+    <Reference Include="Hepsi.Http.Client, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Hepsi.Http.Client.1.0.1\lib\net45\Hepsi.Http.Client.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\packages\Newtonsoft.Json.6.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -60,6 +61,7 @@
     <Compile Include="..\shared\VersionAssemblyInfo.cs">
       <Link>Properties\VersionAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="WrektSteamApiClientFactory.cs" />
     <Compile Include="Trading\TradeRequestHandler.cs" />
     <Compile Include="WrektSteamApiClientBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

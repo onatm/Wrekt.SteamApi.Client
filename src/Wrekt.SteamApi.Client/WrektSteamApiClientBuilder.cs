@@ -19,18 +19,10 @@ namespace Wrekt.SteamApi.Client
 
         private string Referer { get; set; }
 
-        private string BaseAddress { get; set; }
-
         public WrektSteamApiClientBuilder WithTradingRequestHandler(CookieContainer cookieContainer, string referer)
         {
             InnerHandler = new TradeRequestHandler(cookieContainer);
             Referer = referer;
-            return this;
-        }
-
-        public WrektSteamApiClientBuilder WithBaseAddress(string baseAddress)
-        {
-            BaseAddress = baseAddress;
             return this;
         }
 
@@ -81,11 +73,6 @@ namespace Wrekt.SteamApi.Client
             if (!string.IsNullOrEmpty(Referer))
             {
                 httpClient.DefaultRequestHeaders.Add("Referer", Referer);
-            }
-
-            if (!string.IsNullOrEmpty(BaseAddress))
-            {
-                httpClient.BaseAddress = new Uri(BaseAddress);
             }
 
             return httpClient;
