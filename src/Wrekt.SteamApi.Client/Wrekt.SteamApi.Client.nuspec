@@ -12,7 +12,7 @@
     <tags>steam steamapi httpclient trading qos logging correlation</tags>
     <dependencies>
       <group targetFramework=".NETFramework4.5">
-        <dependency id="hepsi.http.client" version="1.0.0" />
+        <dependency id="hepsi.http.client" version="1.0.1" />
 	  </group>
     </dependencies>
   </metadata>
