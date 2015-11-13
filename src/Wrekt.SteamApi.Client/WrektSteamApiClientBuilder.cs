@@ -63,7 +63,7 @@ namespace Wrekt.SteamApi.Client
 
         internal HttpClient Build()
         {
-            var httpClient = handlers.Any() ? new HttpClient(CreateHttpMessageHandler()) : new HttpClient();
+            var httpClient = new HttpClient(CreateHttpMessageHandler());
 
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36");
